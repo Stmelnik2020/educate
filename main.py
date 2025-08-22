@@ -1,9 +1,15 @@
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+def factorial(n):
+    if n < 2:
+        return 1
+    else:
+        return n * factorial(n - 1)
 
-def print_odd_numbers(numbers):
-    for number in numbers:
-        if number % 2 != 0:
-            print(number)
 
-print_odd_numbers()
-    
+def number_of_groups(n, k):
+    result = factorial(n) / (factorial(n - k) * factorial(k))
+    return int(result)
+
+
+
+
+print(number_of_groups(10, 2))
