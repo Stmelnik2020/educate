@@ -1,1 +1,2 @@
-print ('Hello, World!')
+list = []
+list.insert(1, 2)
