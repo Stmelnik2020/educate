@@ -2,7 +2,7 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 def print_odd_numbers(numbers):
     for number in numbers:
-        if number % 2 == 0:
+        if number % 2 != 0:
             print(number)
 
 print_odd_numbers()
