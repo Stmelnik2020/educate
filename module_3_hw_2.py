@@ -10,9 +10,10 @@ def get_days_from_today(date: str) -> int:
     # subtract the current date from the specified date
     try:
         days_left = (datetime.strptime(date, "%Y.%m.%d").date() -
-                    datetime.today().date()).days
+                     datetime.today().date()).days
         return days_left
     except ValueError:
         return f'{set_date} is not date! Write date in format "YYYY.MM.DD'
+
 
 print(get_days_from_today(set_date))
