@@ -13,7 +13,7 @@ def get_days_from_today(date: str) -> int:
                      datetime.today().date()).days
         return days_left
     except ValueError:
-        return f'{set_date} is not date! Write date in format "YYYY.MM.DD'
+        return f'{set_date} is not date! Write date in format "YYYY.MM.DD"'
 
 
 print(get_days_from_today(set_date))
