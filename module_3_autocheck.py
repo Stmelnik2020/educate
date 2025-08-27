@@ -12,15 +12,15 @@ users = [
 date_start = date.today()
 
 
-def string_to_date(date_string): #transform string to datetime object
+def string_to_date(date_string):  # transform string to datetime object
     return datetime.strptime(date_string, "%Y.%m.%d").date()
 
 
-def date_to_string(date): #transform datetime object to string 
+def date_to_string(date):  # transform datetime object to string
     return datetime.strftime(date, "%Y.%m.%d")
 
 
-def prepare_user_list(user_data): # preparing user list
+def prepare_user_list(user_data):  # preparing user list
     prepared_list = []
     for user in user_data:
         prepared_list.append(
@@ -28,14 +28,15 @@ def prepare_user_list(user_data): # preparing user list
     return prepared_list
 
 
-def find_next_weekday(start_date, weekday): # find next weekday after start date
+def find_next_weekday(start_date, weekday):  # find next weekday after start date
     days_ahead = weekday - start_date.weekday()
     if days_ahead <= 0:
         days_ahead += 7
     return start_date + timedelta(days=days_ahead)
 
 
-def get_upcoming_birthdays(users, days=7): # a function that making a list of birthdays for next week
+# a function that making a list of birthdays for next week
+def get_upcoming_birthdays(users, days=7):
     upcoming_birthdays = []
     today = date.today()
     for user in users:
@@ -51,8 +52,8 @@ def get_upcoming_birthdays(users, days=7): # a function that making a list of bi
     return upcoming_birthdays
 
 
-
-def adjust_for_weekend(birthday): # a function that check is a birthday will in weekends
+# a function that check is a birthday will in weekends
+def adjust_for_weekend(birthday):
     if birthday.weekday() >= 5:
         birthday = find_next_weekday(birthday, 0)
         return birthday
