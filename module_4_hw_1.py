@@ -11,7 +11,7 @@ def total_salary(path: Path) -> tuple:
     total_salary_sum = 0
     try:
         # open the file in read mode
-        with open(path, 'r') as file:
+        with open(path) as file:
             # start a loop to process the strings one by one
             for line in file:
                 # increase the value of the variable "total_salary_sum" with each new string
